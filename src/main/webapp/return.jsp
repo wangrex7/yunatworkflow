@@ -6,10 +6,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
 </head>
-<body>
-	<%
-		request.getRequestDispatcher("/WEB-INF/jsp/login/login.jsp")
-				.forward(request, response);
-	%>
+<body>${command}
 </body>
 </html>

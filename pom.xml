@@ -2,7 +2,7 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.yunat.hadoop</groupId>
-  <artifactId>yunworkflow</artifactId>
+  <artifactId>yunatworkflow</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
   <name>yunworkflow Maven Webapp</name>
@@ -63,7 +63,7 @@
   
   
   <build>
-    <finalName>yunworkflow</finalName>
+    <finalName>yunatworkflow</finalName>
   </build>
 </project>
 

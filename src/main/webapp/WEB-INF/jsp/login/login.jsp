@@ -7,9 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<%
-		request.getRequestDispatcher("/WEB-INF/jsp/login/login.jsp")
-				.forward(request, response);
-	%>
+	<div>
+		<form action="login" methed="get">
+			<input type="text" name="username"> <input type="submit"
+				value="SUBMIT">
+		</form>
+	</div>
+
 </body>
 </html>
