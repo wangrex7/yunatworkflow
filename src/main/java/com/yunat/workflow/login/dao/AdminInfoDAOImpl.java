@@ -13,7 +13,7 @@ public class AdminInfoDAOImpl implements AdminInfoDAO {
 	private SessionFactory sessionFactory;
 
 	public AdminInfo getAdminInfo(String username) {
-		AdminInfo admin = (AdminInfo) sessionFactory.openSession().get(
+		AdminInfo admin = (AdminInfo) sessionFactory.getCurrentSession().get(
 				AdminInfo.class, username);
 		return admin;
 	}
