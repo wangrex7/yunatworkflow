@@ -28,8 +28,18 @@ public class LoginController {
 		String username = command.getUsername();
 		String passwd = command.getPassword();
 		AdminInfo tmp = loginService.getAdminInfo(username);
-		logger.info("tmp" + tmp.getUsername() + " " + tmp.getPassword());
-
+		if (tmp == null) {
+			logger.warn("the login user is null,username=" + username);
+			ModelAndView mv = new ModelAndView("/loginerror", "ermessager",
+					"用户不存在,请联系管理员");
+			return mv;
+		} else if (!tmp.getPassword().equals(passwd)) {
+			logger.warn("the login user is error passwd ,username=" + username);
+			ModelAndView mv = new ModelAndView("/loginerror", "ermessager",
+					"用户密码错误");
+			return mv;
+		}
+		logger.info("the user=" + tmp.getUsername() + "is login sucess!");
 		ModelAndView mv = new ModelAndView("/develop/develop", "command",
 				"LOGIN SUCCESS, " + username);
 		return mv;
