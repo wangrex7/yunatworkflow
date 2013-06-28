@@ -25,5 +25,5 @@ public interface DevelopmentService {
 	 * @author: 邱路平 - luping.qiu@huaat.com
 	 * @date: Created on Jun 26, 2013 6:45:27 PM
 	 */
-	public String queryZtreeNodeList();
+	public String queryZtreeNode();
 }

@@ -17,6 +17,7 @@ import javax.persistence.Table;
 public class ZtreeNode {
 
 	@Id
+	@GeneratedValue
 	@Column(name = "tid")
 	private String tid = null;
 	

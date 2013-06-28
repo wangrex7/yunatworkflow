@@ -13,6 +13,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.yunat.workflow.development.dao.ZtreeNodeDAO;
 import com.yunat.workflow.development.pojo.ZtreeNode;
@@ -40,12 +41,20 @@ public class DevelopmentServiceImpl implements DevelopmentService {
 	 * @author: 邱路平 - luping.qiu@huaat.com
 	 * @date: Created on Jun 26, 2013 6:44:44 PM
 	 */
-	public String queryZtreeNodeList() {
+	@Transactional
+	public String queryZtreeNode() {
 		List<ZtreeNode> ztreeNodeList = ztreeNodeDAO.queryZtreeNodeList();
+		StringBuffer nodes = new StringBuffer();
 		for(ZtreeNode zn:ztreeNodeList){
-			System.out.println(zn.getTid());
+			nodes.append("id:"+zn.getTid());
+			nodes.append(",");
+			nodes.append("pid:"+zn.getPid());
+			nodes.append(",");
+			nodes.append("name:"+zn.getName());
+			nodes.append(";");
 		}
-		return null;
+		System.out.println(nodes.toString());
+		return nodes.toString();
 	}
 
 }

@@ -30,7 +30,7 @@ public class ZtreeNodeDAOImpl implements ZtreeNodeDAO {
 	 * @date: Created on Jun 26, 2013 6:25:25 PM
 	 */
 	public List<ZtreeNode> queryZtreeNodeList() {
-		Session session = sessionFactory.openSession();
+		Session session = sessionFactory.getCurrentSession();
 		List<ZtreeNode> ztreeNodeList = session.createQuery("from ZtreeNode").list();
 		return ztreeNodeList;
 	}
