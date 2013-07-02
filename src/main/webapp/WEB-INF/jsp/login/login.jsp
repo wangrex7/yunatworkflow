@@ -10,8 +10,8 @@
 	<div>
 		<form action="login.do" method="post">
 			<label>用户名：</label><input type="text" name="username"><label>密码：</label>
-			<input type="password" name="passwd"> <input type="submit"
-				value="SUBMIT">
+			<input type="password" name="password"> <input type="submit"
+				value="登陆">
 		</form>
 	</div>
 
