@@ -40,7 +40,7 @@ public class LoginController {
 			return mv;
 		}
 		logger.info("the user=" + tmp.getUsername() + "is login sucess!");
-		ModelAndView mv = new ModelAndView("/develop/develop", "command",
+		ModelAndView mv = new ModelAndView("/development/develop", "command",
 				"LOGIN SUCCESS, " + username);
 		return mv;
 	}
