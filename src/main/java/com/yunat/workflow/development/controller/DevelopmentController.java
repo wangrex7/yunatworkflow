@@ -11,13 +11,19 @@ package com.yunat.workflow.development.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.yunat.workflow.development.domain.Ztree;
 import com.yunat.workflow.development.service.DevelopmentService;
+import com.yunat.workflow.login.domain.LoginForm;
+import com.yunat.workflow.login.pojo.AdminInfo;
 
 /**
  * <p>开发中心控制器</p>
@@ -116,5 +122,11 @@ public class DevelopmentController {
 	@RequestMapping(value = "saveZtreeNodeContent.do")
 	public void saveZtreeNodeContent(Ztree zNodeJson){
 		developmentService.saveZtreeNodeContent(zNodeJson);
+	}
+	
+	@RequestMapping(value = "upload.do")
+	public ModelAndView login() {
+		ModelAndView mv = new ModelAndView("/development/upload", "command","LOGIN SUCCESS" );
+		return mv;
 	}
 }

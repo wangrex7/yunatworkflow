@@ -64,6 +64,22 @@ $(function(){
 		};
 		setTimeout(function(){ws.send($("#typehidden").val()+":"+$("#scripts").val())},1000);
 	});
+	$("#upload").click(function(){
+		$.ajax({
+			  url: "upload.do",
+			  type: "POST",
+			  dataType:"html",
+			  async:false,
+			  success: function(data){
+				  $("#developCenterDiv").html(data);
+				  return true;
+			  },
+			  error : function() {  
+				  jAlert("error");
+				  return false;
+		      }  
+		});
+	});
 })
 
 
@@ -110,7 +126,7 @@ function viewNode(treeNode){
 		$("#idhidden").val("");
 		$("#typehidden").val("");
 		$("#scripts").val("");
-		$("#scriptsid").text(treeNode.name);
+//		$("#scriptsid").text(treeNode.name);
 		return false;
 	}else{
 		$.ajax({
@@ -124,7 +140,7 @@ function viewNode(treeNode){
 				  $("#idhidden").val(data.id);
 				  $("#typehidden").val(treeNode.name.split(".")[1]);
 				  $("#scripts").val(data.content);
-				  $("#scriptsid").text(treeNode.name);
+//				  $("#scriptsid").text(treeNode.name);
 				  return true;
 			  },
 			  error : function() {  
@@ -317,13 +333,4 @@ $(document).ready(function(){
         alert("error");
       }  
 	});
-	window.WebSocket = window.WebSocket || window.MozWebSocket;
-//	if (!window.WebSocket){
-//	    alert("WebSocket not supported by this browser");
-//	    return;
-//	}else{
-//		alert("support");
-//	}
-
-
 });

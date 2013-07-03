@@ -19,7 +19,6 @@
 </head>
 
 <body>
-<body>
 <div id="container">
   <div class="menu">
 	<div id="developCenter" name="developCenter" class="menu-item menu-item-active">开发中心</div>
@@ -41,14 +40,17 @@
     </div>
     <div class="margin"></div>
     <div id="divText">
-    	<span>节点名称：</span>
-		<span id="scriptsid"></span>
-    	<textarea id="scripts" cols="87" rows="17" id="content" style="border: 1 solid #888888;LINE-HEIGHT:18px;padding: 3px;"></textarea>
+		<!-- <span id="scriptsid"></span> -->
+    	<textarea id="scripts" cols="87" rows="17" id="content" style="border: 1 solid #D3D3D3;LINE-HEIGHT:18px;padding: 3px;"></textarea>
     </div>
     <div class="margin"></div>
     <div id="divLog">
+    <div>
 	<span id="logsid" value="日志">日志</span><input id="clear" type="button" value="清空" style="background:transparent;border-width:1px;float:right;">
-	<textarea id="logs" cols="87" rows="16" id="content" style="border: 1 solid #888888;LINE-HEIGHT:18px;padding: 3px;overflow-x:auto"></textarea>
+	</div>
+	<div>
+	<textarea id="logs" cols="87" rows="16" id="content" style="border: 1 solid #D3D3D3;LINE-HEIGHT:18px;padding: 3px;overflow-x:auto"></textarea>
+	</div>
     </div>
   </div>
   <div id="workflowCenterDiv" style="display:none">
