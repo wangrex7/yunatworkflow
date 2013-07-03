@@ -13,10 +13,59 @@ $(function(){
 	$("span[id^='_span']").click(function(){
 		$("#scripts").val($(this).attr("name"));	
 	});
-	$("input[type='button']").click(function(){
-        	alert($(this).val());
-        });
+	$("#save").click(function(){
+		if($("#idhidden").val() == ""){
+			return false;
+		}
+		$.ajax({
+			  url: "saveZtreeNodeContent.do",
+			  type: "POST",
+			  data:({"id":$("#idhidden").val(),"content":$("#scripts").val()}),
+			  async:false,
+			  success: function(){
+				  $("#contenthidden").val($("#scripts").val());
+				  jAlert("保存成功！");
+				  return true;
+			  },
+			  error : function() {  
+				  jAlert("error");
+				  return false;
+		      }  
+			});
+	});
+	$("#clear").click(function(){
+		$("#logs").val("");
+	});
+	$("#run").click(function(){
+		var ws = null;
+		var timestamp=(new Date()).valueOf();
+		if ('WebSocket' in window)
+			ws = new WebSocket(
+					"ws://10.200.190.191:8080/yunatworkflow/mywebsocket"+timestamp+".socket");
+		else if ('MozWebSocket' in window)
+			ws = new MozWebSocket(
+					"ws://10.200.190.191:8080/yunatworkflow/mywebsocket"+timestamp+".socket");
+		else
+			alert("not support");
+		ws.onmessage = function(evt) {
+			$("#logs").append(evt.data);
+			var textArea = document.getElementById('logs');
+			setTimeout(function(){
+				textArea.scrollTop = textArea.scrollHeight;
+			}, 10);
+		};
+
+		ws.onclose = function(evt) {
+			alert("close");
+		};
+
+		ws.onopen = function(evt) {
+			alert("open");
+		};
+		setTimeout(function(){ws.send($("#typehidden").val()+":"+$("#scripts").val())},1000);
+	});
 })
+
 
 var setting = {
 	view: {
@@ -49,10 +98,70 @@ var setting = {
 	}
 };
 
+//点击节点事件
 function onClick(event, treeId, treeNode, clickFlag) {
-	$("#scripts").val(treeNode.name);
-	$("#scriptsid").text(treeNode.name);
+	//验证活动节点是否需要保存。调用回调函数查看节点信息
+	verify(treeNode,viewNode);
 }
+//查看节点内容信息
+function viewNode(treeNode){
+	if(treeNode.isParent){
+		$("#contenthidden").val("");
+		$("#idhidden").val("");
+		$("#typehidden").val("");
+		$("#scripts").val("");
+		$("#scriptsid").text(treeNode.name);
+		return false;
+	}else{
+		$.ajax({
+			  url: "queryZtreeNodeContent.do",
+			  type: "POST",
+			  data:({"id":treeNode.id}),
+			  dataType:"json",
+			  async:false,
+			  success: function(data){
+				  $("#contenthidden").val(data.content);
+				  $("#idhidden").val(data.id);
+				  $("#typehidden").val(treeNode.name.split(".")[1]);
+				  $("#scripts").val(data.content);
+				  $("#scriptsid").text(treeNode.name);
+				  return true;
+			  },
+			  error : function() {  
+				  jAlert("error");
+				  return false;
+		      }  
+			});
+	}
+}
+//验证节点是否需要保存，根据情况执行回调函数
+function verify(treeNode,callBack){
+	if($("#scripts").val() != $("#contenthidden").val()){
+		jConfirm('脚本未保存，是否保存?', '友情提示', function(r) {
+		    if(r){
+		    	$.ajax({
+					  url: "saveZtreeNodeContent.do",
+					  type: "POST",
+					  data:({"id":$("#idhidden").val(),"content":$("#scripts").val()}),
+					  async:false,
+					  success: function(){
+						  jAlert("保存成功！");
+						  callBack(treeNode);
+					  },
+					  error : function() {  
+						  jAlert("error");
+						  return false;
+				      }  
+					});
+		    }else{
+		    	callBack(treeNode);
+			}
+		});
+	}else{
+		callBack(treeNode);
+	}
+}
+
 var log, className = "dark";
 function beforeDrag(treeId, treeNodes) {
 	return false;
@@ -66,30 +175,53 @@ function beforeEditName(treeId, treeNode) {
 }
 function beforeRemove(treeId, treeNode) {
 	className = (className === "dark" ? "":"dark");
-	showLog("[ "+getTime()+" beforeRemove ]&nbsp;&nbsp;&nbsp;&nbsp; " + treeNode.name);
-	var zTree = $.fn.zTree.getZTreeObj("tree");
-	zTree.selectNode(treeNode);
-	return confirm("确认删除 节点 -- " + treeNode.name + " 吗？");
+	if(confirm("确认删除节点--" + treeNode.name + " 吗？")){
+		$.ajax({
+			  url: "deleteZtreeNode.do",
+			  type: "POST",
+			  data:({"id":treeNode.id}),
+			  async:false,
+			  success: function(){
+				  return true;
+			  },
+			  error : function() {  
+				  jAlert("error");
+		        return false;
+		      }  
+			});
+	}
 }
 function onRemove(e, treeId, treeNode) {
 	showLog("[ "+getTime()+" onRemove ]&nbsp;&nbsp;&nbsp;&nbsp; " + treeNode.name);
 }
 function beforeRename(treeId, treeNode, newName, isCancel) {
 	className = (className === "dark" ? "":"dark");
-	showLog((isCancel ? "<span style='color:red'>":"") + "[ "+getTime()+" beforeRename ]&nbsp;&nbsp;&nbsp;&nbsp; " + treeNode.name + (isCancel ? "</span>":""));
 	if (newName.length == 0) {
 		alert("节点名称不能为空.");
 		var zTree = $.fn.zTree.getZTreeObj("tree");
 		setTimeout(function(){zTree.editName(treeNode)}, 10);
 		return false;
 	}
+	$.ajax({
+		  url: "renameZtreeNode.do",
+		  type: "POST",
+		  data:({"id":treeNode.id,"name":newName}),
+		  async:false,
+		  success: function(){
+			  return true;
+		  },
+		  error : function() {  
+	        jAlert("error");
+	        return false;
+	      }  
+		});
 	return true;
 }
 function onRename(e, treeId, treeNode, isCancel) {
 	showLog((isCancel ? "<span style='color:red'>":"") + "[ "+getTime()+" onRename ]&nbsp;&nbsp;&nbsp;&nbsp; " + treeNode.name + (isCancel ? "</span>":""));
 }
 function showRemoveBtn(treeId, treeNode) {
-	return !treeNode.isFirstNode;
+	return treeNode.id!="1";
 }
 function showRenameBtn(treeId, treeNode) {
 	//return !treeNode.isLastNode;
@@ -135,9 +267,21 @@ function addHoverDom(treeId, treeNode) {
 				jAlert("目前只支持.hive文件","友情提示");
 				return;
 			}
-			var zTree = $.fn.zTree.getZTreeObj("tree");
-			zTree.addNodes(treeNode, {id:(100 + newCount), pId:treeNode.id, name:r, isParent:isfolder});
-			return false;
+			$.ajax({
+				  url: "addZtreeNode.do",
+				  type: "POST",
+				  data:({"pId":treeNode.id,"name":r,"taskId":treeNode.taskId,"isParent":isfolder}),
+				  dataType:"json",
+				  async:false,
+				  success: function(data){
+					  var zTree = $.fn.zTree.getZTreeObj("tree");
+					  zTree.addNodes(treeNode, data);
+					  return false;
+				  },
+				  error : function(data) {  
+			        alert("error");
+			      }  
+				});
 		});
 	});
 };
@@ -150,7 +294,7 @@ function selectAll() {
 }
 
 var zNodes =[
-	{ "id":"1", "pId":"0", "name":"父节点 1", "open":"true"},
+	{ "id":"1", "pId":"0", "name":"父节点 1", "open":"true","group_id":""},
 	{ "id":"11", "pId":"1", "name":"叶子节点 1-1"},
 	{ "id":"12", "pId":"1", "name":"叶子节点 1-2"},
 	{ "id":"13", "pId":"1", "name":"叶子节点 1-3"}
@@ -161,16 +305,25 @@ $(document).ready(function(){
 	$.ajax({
 	  url: "queryZtree.do",
 	  type: "POST",
-	  dataType:"Text",
+	  dataType:"json",
+	  async:false,
 	  success: function(data){
-		  alert(data);
+		  zNodes = data;
+		  t = $.fn.zTree.init(t, setting, zNodes);
+		  var zTree = $.fn.zTree.getZTreeObj("tree");
+		  zTree.selectNode(zTree.getNodeByParam("id", "1"));
 	  },
 	  error : function(data) {  
         alert("error");
       }  
 	});
-	t = $.fn.zTree.init(t, setting, zNodes);
-	var zTree = $.fn.zTree.getZTreeObj("tree");
-	zTree.selectNode(zTree.getNodeByParam("id", 101));
+	window.WebSocket = window.WebSocket || window.MozWebSocket;
+//	if (!window.WebSocket){
+//	    alert("WebSocket not supported by this browser");
+//	    return;
+//	}else{
+//		alert("support");
+//	}
+
 
 });
