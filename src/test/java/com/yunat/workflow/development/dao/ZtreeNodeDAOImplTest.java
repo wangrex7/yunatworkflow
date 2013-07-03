@@ -38,7 +38,7 @@ public class ZtreeNodeDAOImplTest extends AbstractJUnit4SpringContextTests {
 	public void querytest() {
 		List<ZtreeNode> znl = ztreeNodeDAO.queryZtreeNodeList();
 		for(ZtreeNode zn:znl){
-			System.out.println(zn.getTid());
+			System.out.println(zn.getId());
 		}
 			
 		

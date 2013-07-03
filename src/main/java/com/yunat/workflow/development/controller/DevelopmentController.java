@@ -9,11 +9,14 @@
  */
 package com.yunat.workflow.development.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.yunat.workflow.development.domain.Ztree;
 import com.yunat.workflow.development.service.DevelopmentService;
 
 /**
@@ -28,11 +31,90 @@ public class DevelopmentController {
 	@Autowired
 	private DevelopmentService developmentService;
 	
+	/**
+	 * <p>查询任务树</p>
+	 * 
+	 * @return
+	 * @return: List<Ztree>
+	 * @author: 邱路平 - luping.qiu@huaat.com
+	 * @date: Created on Jun 28, 2013 3:25:33 PM
+	 */
 	@ResponseBody
 	@RequestMapping(value = "queryZtree.do")
-	public String queryZtree(){
-		String ztreeJson = developmentService.queryZtreeNode();
-		return ztreeJson;
+	public List<Ztree> queryZtree(){
+		return developmentService.queryZtreeNode();
 	}
 
+	/**
+	 * <p>增加树节点</p>
+	 * 
+	 * @param zNodeJson
+	 * @return
+	 * @return: Ztree
+	 * @author: 邱路平 - luping.qiu@huaat.com
+	 * @date: Created on Jun 28, 2013 3:31:42 PM
+	 */
+	@ResponseBody
+	@RequestMapping(value = "addZtreeNode.do")
+	public Ztree addZtreeNode(Ztree zNodeJson){
+		Ztree zt =developmentService.addZtreeNode(zNodeJson);
+		return zt;
+	}
+	
+	/**
+	 * <p>删除节点</p>
+	 * 
+	 * @param zNodeJson
+	 * @return: void
+	 * @author: 邱路平 - luping.qiu@huaat.com
+	 * @date: Created on Jun 28, 2013 6:15:09 PM
+	 */
+	@ResponseBody
+	@RequestMapping(value = "deleteZtreeNode.do")
+	public void deleteZtreeNode(Ztree zNodeJson){
+		developmentService.deleteZtreeNode(zNodeJson);
+	}
+	
+	/**
+	 * <p>修改节点名称</p>
+	 * 
+	 * @param zNodeJson
+	 * @return: void
+	 * @author: 邱路平 - luping.qiu@huaat.com
+	 * @date: Created on Jun 28, 2013 6:40:29 PM
+	 */
+	@ResponseBody
+	@RequestMapping(value = "renameZtreeNode.do")
+	public void renameZtreeNode(Ztree zNodeJson){
+		developmentService.renameZtreeNode(zNodeJson);
+	}
+	
+	/**
+	 * <p>查询节点内容信息</p>
+	 * 
+	 * @param zNodeJson
+	 * @return
+	 * @return: Ztree
+	 * @author: 邱路平 - luping.qiu@huaat.com
+	 * @date: Created on Jul 1, 2013 2:05:33 PM
+	 */
+	@ResponseBody
+	@RequestMapping(value = "queryZtreeNodeContent.do")
+	public Ztree queryZtreeNodeContent(Ztree zNodeJson){
+		return developmentService.queryZtreeNodeNodeContent(zNodeJson);
+	}
+	
+	/**
+	 * <p>保存节点内容信息</p>
+	 * 
+	 * @param zNodeJson
+	 * @return: void
+	 * @author: 邱路平 - luping.qiu@huaat.com
+	 * @date: Created on Jul 1, 2013 2:45:28 PM
+	 */
+	@ResponseBody
+	@RequestMapping(value = "saveZtreeNodeContent.do")
+	public void saveZtreeNodeContent(Ztree zNodeJson){
+		developmentService.saveZtreeNodeContent(zNodeJson);
+	}
 }
