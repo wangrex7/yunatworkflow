@@ -43,7 +43,7 @@ form{
 #Head{
 	width:1025px;
 	height:89px;
-	background:url(../images/head_bg_gongyings.jpg) no-repeat left top;
+	background:url(../image/head_bg_gongyings.jpg) no-repeat left top;
 	position:relative;
 	z-index:99;
 	margin-bottom:12px;
@@ -59,7 +59,7 @@ form{
 	float:left;
 	padding:0 8px;
 	line-height:26px;
-	background:url(../images/quick_bg.gif) no-repeat right center;
+	background:url(../image/quick_bg.gif) no-repeat right center;
 }
 #QuickNavi li a{
 	text-decoration:none;
@@ -107,7 +107,7 @@ form{
 	text-decoration:underline;
 }
 #HeadSearch #searchSelect li.selectTag a{
-	background:url(../images/tag_selected_bg.gif) no-repeat left top;
+	background:url(../image/tag_selected_bg.gif) no-repeat left top;
 	font-weight:bold;
 }
 #HeadSearch form{
@@ -124,13 +124,13 @@ form{
 	padding-top:5px;
 	padding-bottom:5px;
 	line-height:30px;
-	background:url(../images/head_search_bg.gif) no-repeat left top;
+	background:url(../image/head_search_bg.gif) no-repeat left top;
 	border:none;
 	float:left;
 	text-indent:14px;
 }
 .search_botton{
-	background:url(../images/head_search_button.gif) no-repeat left top;
+	background:url(../image/head_search_button.gif) no-repeat left top;
 	border:none;
 	padding:0;
 	margin:0;
@@ -178,7 +178,7 @@ form{
 	margin:0 auto;
 	height:28px;
 	line-height:28px;
-	background:url(../images/h2_bg.jpg) no-repeat left top;
+	background:url(../image/h2_bg.jpg) no-repeat left top;
 	position:relative;
 	text-indent:28px;
 }
@@ -197,7 +197,7 @@ form{
 	text-decoration:none;
 }
 #LeftNavi h2 a.new{
-	background:url(../images/new.gif) no-repeat right center;
+	background:url(../image/new.gif) no-repeat right center;
 	}
 #LeftNavi ul{
 	width:162px;
@@ -222,7 +222,7 @@ form{
 	position:absolute;
 	}
 #LeftNavi ul li a{
-    background:url(../images/li_bg.gif) no-repeat 4% center;
+    background:url(../image/li_bg.gif) no-repeat 4% center;
 	display:block;
 	width:162px;
 	color:#333;
@@ -247,7 +247,7 @@ form{
 }
 /*左侧登录信息、客服、公告等css*/
 #LeftNavi h2.left_info{
-	background:url(../images/h2_bg.jpg) no-repeat right top;
+	background:url(../image/h2_bg.jpg) no-repeat right top;
 	margin-top:12px;
 	position:relative;
 }
@@ -294,21 +294,21 @@ form{
 	text-indent:-9999px;
 	width:164px;
 	height:28px;
-	background:url(../images/mailme.jpg) no-repeat left center;
+	background:url(../image/mailme.jpg) no-repeat left center;
 	}
 #LeftNavi h2.shipin a{
 	display:block;
 	text-indent:-9999px;
 	width:164px;
 	height:50px;
-	background:url(../images/shipin.jpg) no-repeat left center;
+	background:url(../image/shipin.jpg) no-repeat left center;
 	}
 #LeftNavi h2.sjsc a{
 	display:block;
 	text-indent:-9999px;
 	width:164px;
 	height:70px;
-	background:url(../images/sjsc.jpg) no-repeat left center;
+	background:url(../image/sjsc.jpg) no-repeat left center;
 	}
 #LeftNavi h2.anli{
 	width:164px;
@@ -320,7 +320,7 @@ form{
 	text-indent:-9999px;
 	width:164px;
 	height:28px;
-	background:url(../images/anli.gif) no-repeat left center;
+	background:url(../image/anli.gif) no-repeat left center;
 	}
 #LeftNavi h2.shengji{
 	width:164px;
@@ -332,7 +332,7 @@ form{
 	text-indent:-9999px;
 	width:164px;
 	height:28px;
-	background:url(../images/shengji.gif) no-repeat left center;
+	background:url(../image/shengji.gif) no-repeat left center;
 	}
 #LeftNavi h2.dinggou{
 	width:164px;
@@ -344,7 +344,7 @@ form{
 	text-indent:-9999px;
 	width:164px;
 	height:28px;
-	background:url(../images/digou.gif) no-repeat left center;
+	background:url(../image/digou.gif) no-repeat left center;
 	}
 #MainContentRight{
 	width:818px;
@@ -369,12 +369,12 @@ form{
 #MainContentRight .mainContentRight{
 	padding:22px 3px 12px 3px;
 	width:812px;
-	background:url(../images/main_right_bg.jpg) no-repeat left top;
+	background:url(../image/main_right_bg.jpg) no-repeat left top;
 	position:relative;
 }
 #Options3{
 	position:absolute;
-	background:url(../images/option3_bg.jpg) no-repeat left top;
+	background:url(../image/option3_bg.jpg) no-repeat left top;
 	right:0px;
 	top:-27px;
 	width:250px;
@@ -386,7 +386,7 @@ form{
 	z-index:999;
 }
 #Options3 p{
-	background:url(../images/alarm-clock.gif) no-repeat left center;
+	background:url(../image/alarm-clock.gif) no-repeat left center;
 	text-indent:22px;
 	text-align: justify;
 }
@@ -400,16 +400,16 @@ form{
 #key_search{
 	width:802px;
 	height:29px;
-	background:url(../images/key_search_bg.gif) no-repeat left top;
+	background:url(../image/key_search_bg.gif) no-repeat left top;
 	padding:5px 5px 5px 5px;
 }
 #key_search.fenxiaoshang{
-	background:url(../images/key_search_bg.gif) no-repeat left bottom;
+	background:url(../image/key_search_bg.gif) no-repeat left bottom;
 }
 .key_search_input{
 	width:425px;
 	height:29px;
-	background:url(../images/key_search_input_03.jpg) no-repeat left top;
+	background:url(../image/key_search_input_03.jpg) no-repeat left top;
 	padding:0;
 	margin:0;
 	border:none;
@@ -420,7 +420,7 @@ form{
 .key_search_button{
 	margin:0;
 	padding:0;
-	background:url(../images/key_search_botton.jpg) no-repeat left top;
+	background:url(../image/key_search_botton.jpg) no-repeat left top;
 	width:98px;
 	height:29px;
 	border:none;
@@ -434,14 +434,14 @@ form{
 	width:150px;
 	margin:25px auto;
 	padding:24px 0;
-	background:url(../images/loading.gif) no-repeat center bottom;
+	background:url(../image/loading.gif) no-repeat center bottom;
 	text-align:center;
 	}
 #loadingfxs1{
 	width:450px;
 	height:70px;
 	padding:24px 0;
-	background:url(../images/loading.gif) no-repeat center center;
+	background:url(../image/loading.gif) no-repeat center center;
 	/* text-align:center;*/
 	position:absolute;
 	background-color:#fff;
@@ -454,7 +454,7 @@ form{
 	width:100%;
 	height:70px;
 	padding:24px 0;
-	background:url(../images/loading.gif) no-repeat center center;
+	background:url(../image/loading.gif) no-repeat center center;
 	text-align:center;
 	background-color:#fff;
 	z-index:999;
@@ -555,7 +555,7 @@ form{
 	padding:4px;
 	}
 #conditionSelect table td input.confirm{
-    background:url(../images/confirm_bg.gif) no-repeat left center;
+    background:url(../image/confirm_bg.gif) no-repeat left center;
     height:25px;
     color:#fff;
     width:70px;
@@ -598,12 +598,12 @@ form{
 	line-height:24px;
 	height:24px;
 	font-size:12px;
-	background:url(../images/h4_bg.png) no-repeat left center;
+	background:url(../image/h4_bg.png) no-repeat left center;
 	text-indent:22px;
 }
 #shop_details p.noInfo{
 	padding:8px 20px;
-	background:url(../images/busy.gif) no-repeat left center;
+	background:url(../image/busy.gif) no-repeat left center;
 	color:#ff0000;
 
 	}
@@ -651,13 +651,13 @@ form{
 	width:133px;
 	height:63px;
 	float:left;
-	background:url(../images/info_bg.gif) no-repeat left top;
+	background:url(../image/info_bg.gif) no-repeat left top;
 	position:relative;
 	margin-left:10px;
 }
 #shop_details .shop_information ul.shop_information2 li a{
 	padding-right:18px;
-	background:url(../images/tabicons_070.gif) no-repeat right top;
+	background:url(../image/tabicons_070.gif) no-repeat right top;
 }
 #shop_details .shop_information ul.shop_information2 li span{
 	position:absolute;
@@ -667,12 +667,12 @@ form{
 	display:block;
 }
 #shop_details .shop_information ul.shop_information2 li.jiazhi_text{
-	background:url(../images/info_bg.gif) no-repeat left -315px;
+	background:url(../image/info_bg.gif) no-repeat left -315px;
 }
 #shop_details .shop_information ul.shop_information2 li.jiazhi_text span{
 	width:60px;
 	height:15px;
-	background:url(../images/xingxing_bg.gif) no-repeat left top;
+	background:url(../image/xingxing_bg.gif) no-repeat left top;
 	text-indent:-9999px;
 	display:block;
 }
@@ -680,7 +680,7 @@ form{
 /*
 #shop_details .shop_information ul.shop_information2 li.jiazhi_text span#dpJz{
 	position:relative;
-	background:url(../images/xingxing_bg.gif) no-repeat left top;
+	background:url(../image/xingxing_bg.gif) no-repeat left top;
 	text-indent:-9999px;
 	width:100%;
 	height:15px;
@@ -689,37 +689,37 @@ form{
 	}
 	*/
 #shop_details .shop_information ul.shop_information2 li.quyu{
-	background:url(../images/info_bg.gif) no-repeat right -63px;
+	background:url(../image/info_bg.gif) no-repeat right -63px;
 }
 #shop_details .shop_information ul.shop_information2 li.quyu_huizong{
-	background:url(../images/info_bg.gif) no-repeat left -63px;
+	background:url(../image/info_bg.gif) no-repeat left -63px;
 }
 #shop_details .shop_information ul.shop_information2 li.kaidian{
-	background:url(../images/info_bg.gif) no-repeat right -252px;
+	background:url(../image/info_bg.gif) no-repeat right -252px;
 }
 #shop_details .shop_information ul.shop_information2 li.kaidian_huizong{
-	background:url(../images/info_bg.gif) no-repeat left -252px;
+	background:url(../image/info_bg.gif) no-repeat left -252px;
 }
 #shop_details .shop_information ul.shop_information2 li.xinyong{
-	background:url(../images/info_bg.gif) no-repeat right -126px;
+	background:url(../image/info_bg.gif) no-repeat right -126px;
 }
 #shop_details .shop_information ul.shop_information2 li.xinyong_huizong{
-	background:url(../images/info_bg.gif) no-repeat left -126px;
+	background:url(../image/info_bg.gif) no-repeat left -126px;
 }
 #shop_details .shop_information ul.shop_information2 li.fenxiaoshang{
-	background:url(../images/info_bg.gif) no-repeat left top ;
+	background:url(../image/info_bg.gif) no-repeat left top ;
 }
 #shop_details .shop_information ul.shop_information2 li.hezuo_huizong{
-	background:url(../images/info_bg.gif) no-repeat left -189px;
+	background:url(../image/info_bg.gif) no-repeat left -189px;
 }
 #shop_details .shop_information ul.shop_information2 li.haoping{
-	background:url(../images/info_bg.gif) no-repeat left -378px;
+	background:url(../image/info_bg.gif) no-repeat left -378px;
 }
 #shop_details .shop_information ul.shop_information2 li.pingfen{
-	background:url(../images/info_bg.gif) no-repeat right -378px;
+	background:url(../image/info_bg.gif) no-repeat right -378px;
 }
 #shop_details .shop_information ul.shop_information2 li.shangcheng{
-	background:url(../images/info_bg.gif) no-repeat right -315px;
+	background:url(../image/info_bg.gif) no-repeat right -315px;
 }
 #shop_details .shop_information ul.shop_information3{
 	width:785px;
@@ -759,7 +759,7 @@ form{
 }
 ul#information2 li{
 	line-height:2em;
-	background:url(../images/li_bg.png) no-repeat left center;
+	background:url(../image/li_bg.png) no-repeat left center;
 	text-indent:20px;
 	height:24px;
 	line-height:24px;
@@ -770,11 +770,11 @@ ul#information2 li span{
 }
 ul#information2 li span.up{
 	padding-right:18px;
-	background:url(../images/law_up.gif) no-repeat right center;
+	background:url(../image/law_up.gif) no-repeat right center;
 	}
 ul#information2 li span.down{
 	padding-right:18px;
-	background:url(../images/law_down.gif) no-repeat right center;
+	background:url(../image/law_down.gif) no-repeat right center;
 	color:#009944;
 	}
 ul#information2 li span a{
@@ -785,7 +785,7 @@ ul#information2 li span a{
 ul#information2 li span a:hover{
 	text-decoration:underline;
 	padding-right:20px;
-	background:url(../images/tabicons_070.gif) no-repeat right center;
+	background:url(../image/tabicons_070.gif) no-repeat right center;
 }
 
 .paihang{
@@ -796,7 +796,7 @@ ul#information2 li span a:hover{
 	width:394px;
 	height:26px;
 	line-height:26px;
-	background:url(../images/h5_bg.gif) repeat-x left top;
+	background:url(../image/h5_bg.gif) repeat-x left top;
 	font-size:12px;
 	border:1px solid #c9dbdf;
 	text-indent:8px;
@@ -843,7 +843,7 @@ ul#information2 li span a:hover{
 	float:left;
 }
 .paihang_data th{
-	background:#dfdfdf url(../images/navi_bg.gif) repeat-x left center;
+	background:#dfdfdf url(../image/navi_bg.gif) repeat-x left center;
 	text-align:center;
 	height:26px;
 }
@@ -852,7 +852,7 @@ ul#information2 li span a:hover{
 }
 .paihang_data td.fxsName a{
 	padding-right:55px;
-	background:url(../images/cooper.gif) no-repeat right top;
+	background:url(../image/cooper.gif) no-repeat right top;
 	}
 
 
@@ -874,16 +874,16 @@ form.results_options input, form.results_options select{
 	padding-left:33px;
 	height:14px;
 	line-height:14px;
-	background:url(../images/jxdx.png) no-repeat left top;
+	background:url(../image/jxdx.png) no-repeat left top;
 	display:block;
 	}
 .table_div td span.paiHang{
-	background:url(../images/q_paiming_l.gif) no-repeat center center;
+	background:url(../image/q_paiming_l.gif) no-repeat center center;
 	line-height:30px;
 	display:block;
 	}
 .table_div td span.paiHangFive{
-	background:url(../images/q_paiming.gif) no-repeat center center;
+	background:url(../image/q_paiming.gif) no-repeat center center;
 	line-height:30px;
 	display:block;
 	}
@@ -891,14 +891,14 @@ form.results_options input, form.results_options select{
 	padding-left:33px;
 	height:14px;
 	line-height:14px;
-	background:url(../images/jxdx.png) no-repeat left bottom;
+	background:url(../image/jxdx.png) no-repeat left bottom;
 	display:block;
 	}
 .table_div td span.jxdx{
 	padding-left:33px;
 	height:28px;
 	line-height:28px;
-	background:url(../images/jxdx.png) no-repeat left center;
+	background:url(../image/jxdx.png) no-repeat left center;
 	display:block;
 	}
 
@@ -963,7 +963,7 @@ form.results_options input, form.results_options select{
 	width:100%;
 	clear:both;
 	margin:0 auto;
-	background:url(../images/navi_bg.gif) repeat-x left center;
+	background:url(../image/navi_bg.gif) repeat-x left center;
 }
 .datatable th{
 	padding: 3px 18px 3px 10px;
@@ -981,23 +981,23 @@ form.results_options input, form.results_options select{
 	text-align:left;
 }
 .datatable th.sorting_asc {
-	background:url(../images/sort_asc.gif) no-repeat center right;
+	background:url(../image/sort_asc.gif) no-repeat center right;
 }
 
 .datatable th.sorting_desc {
-	background:url(../images/sort_desc.gif) no-repeat center right;
+	background:url(../image/sort_desc.gif) no-repeat center right;
 }
 
 .datatable th.sorting {
-	background:url(../images/sort_both.gif) no-repeat center right;
+	background:url(../image/sort_both.gif) no-repeat center right;
 }
 
 .datatable th.sorting_asc_disabled {
-	background:url(../images/sort_asc_disabled.gif) no-repeat center right;
+	background:url(../image/sort_asc_disabled.gif) no-repeat center right;
 }
 
 .datatable th.sorting_desc_disabled {
-	background:url(../images/sort_desc_disabled.gif) no-repeat center right;
+	background:url(../image/sort_desc_disabled.gif) no-repeat center right;
 }
 .datatable td{
 	padding: .5em;
@@ -1032,12 +1032,12 @@ background-color:#fff;
 	color:#333;
 }
 .datatable td.doneApply{
-	background:url(../images/nopass.png) no-repeat left center;
+	background:url(../image/nopass.png) no-repeat left center;
 }
 .datatable a.linkButton {
 	color:#F00;
 	text-decoration:none;
-	background:url(../images/botton_062.gif) no-repeat left top;
+	background:url(../image/botton_062.gif) no-repeat left top;
 	text-align:center;
 	width:36px;
 	height:17px;
@@ -1082,24 +1082,24 @@ BACKGROUND-COLOR: #d0d0d0
 }
 
 .paginate_disabled_previous {
-	background-image: url(../images/back_disabled.jpg);
+	background-image: url(../image/back_disabled.jpg);
 }
 
 .paginate_enabled_previous {
-	background-image: url(../images/back_enabled.jpg);
+	background-image: url(../image/back_enabled.jpg);
 }
 
 .paginate_disabled_next {
-	background-image: url(../images/forward_disabled.jpg);
+	background-image: url(../image/forward_disabled.jpg);
 }
 
 .paginate_enabled_next {
-	background-image: url(../images/forward_enabled.jpg);
+	background-image: url(../image/forward_enabled.jpg);
 }
 input.search{
 	padding:0;
 	margin:0;
-	background:url(../images/button_bg.gif) repeat-x left top;
+	background:url(../image/button_bg.gif) repeat-x left top;
 	width:auto;
 	padding:0 4px;
 	border:1px solid #c61800;
@@ -1143,7 +1143,7 @@ input.search{
 	z-index:99;
 	}
 .newButton input{
-	background:url("../images/button_bg.gif") no-repeat left center;
+	background:url("../image/button_bg.gif") no-repeat left center;
 	border:none;
 	width:126px;
 	height:20px;
@@ -1153,7 +1153,7 @@ input.search{
 	cursor:pointer;
 	}
 .newButton input.firstSpecial{
-	background:url("../images/shis.gif") no-repeat left center;
+	background:url("../image/shis.gif") no-repeat left center;
 	width:90px;
 	text-align:left;
 	text-indent:20px;
@@ -1222,7 +1222,7 @@ border:2px solid #CCC;
 	width:145px;
 	}
 ul.timeSelect input.databutton{
-	background:url("../images/btn_bk.jpg") no-repeat left center;
+	background:url("../image/btn_bk.jpg") no-repeat left center;
 	width:70px;
 	height:23px;
 	border:none;
@@ -1240,7 +1240,7 @@ ul.timeSelect input.databutton{
 	width:105px;
 	height:27px;
 	line-height:27px;
-	background:url(../images/tab_bg2.gif) no-repeat right top;
+	background:url(../image/tab_bg2.gif) no-repeat right top;
 	border-bottom:none;
 	display:inline;
 	margin-bottom:0;
@@ -1253,7 +1253,7 @@ ul.timeSelect input.databutton{
 #TabDetails ul.tabSelect li.tabSelected a, #TabDetails ul.tabSelect li.ui-tabs-selected a, #TabDetails ul.tabSelect li a:hover,#TabDetailstfxs ul.tabSelect li.tabSelected a, #TabDetailstfxs ul.tabSelect li.ui-tabs-selected a, #TabDetailstfxs ul.tabSelect li a:hover,#TabDetailstfxsp ul.tabSelect li.tabSelected a, #TabDetailstfxsp ul.tabSelect li.ui-tabs-selected a, #TabDetailstfxsp ul.tabSelect li a:hover{
 	/*.ui-tabs-selected是小陆js文件中的变量，无法修改，只能在此重复一遍，与.tabSelect等价*/
 	border-bottom:none;
-	background:url(../images/tab_bg2.gif) no-repeat left top;
+	background:url(../image/tab_bg2.gif) no-repeat left top;
 	color:#0C5E78;
 	font-weight:bold;
 }
@@ -1268,7 +1268,7 @@ ul.timeSelect input.databutton{
 	bottom:4px;
 	color:#FF0000;
 	background:none;
-	background:url(../images/time.png) no-repeat left top;
+	background:url(../image/time.png) no-repeat left top;
 	text-indent:20px;
 	width:auto;
 	font-weight:bold;
@@ -1315,7 +1315,7 @@ ul.timeSelect input.databutton{
 	width:16px;
 	height:16px;
 	float:right;
-	background:url(../images/time.gif) no-repeat right center;
+	background:url(../image/time.gif) no-repeat right center;
 }
 .table_style th span{
 		position:relative;
@@ -1355,12 +1355,12 @@ ul.timeSelect input.databutton{
 	}
 .table_style .smalldata td div.down span, .table_style .smalldata td.down span{
 	padding-right:18px;
-	background:url(../images/law_down.gif) no-repeat right center;
+	background:url(../image/law_down.gif) no-repeat right center;
 	color:#009944;
 }
 .table_style .smalldata td div.up span, .table_style .smalldata td.up span{
 	padding-right:18px;
-	background:url(../images/law_up.gif) no-repeat right center;
+	background:url(../image/law_up.gif) no-repeat right center;
 	color:#FF3300;
 	}
 /*滑过图标显示提示文字*/
@@ -1406,10 +1406,10 @@ span#btc{
 #jiazhi li.jiazhi_bg{
 	width:80px;
 	height:16px;
-	background:url(../images/xingxing_bg.gif) no-repeat left bottom;
+	background:url(../image/xingxing_bg.gif) no-repeat left bottom;
 }
 #jiazhi li.jiazhi_bg span{
-	background:url(../images/xingxing_bg.gif) no-repeat left top;
+	background:url(../image/xingxing_bg.gif) no-repeat left top;
 	width:60px;
 	display:block;
 	text-indent:-9999px;
@@ -1430,7 +1430,7 @@ span#btc{
 #jiazhi li.jiazhi_794 table th{
 	border:1px solid #CCC;
 	padding:5px 8px;
-	background:url("../images/navi_bg.gif") repeat-x scroll left center transparent;
+	background:url("../image/navi_bg.gif") repeat-x scroll left center transparent;
 }
 #jiazhi li.jiazhi_794 table td.center{
 	text-align:center;
@@ -1468,7 +1468,7 @@ span#btc{
 	float:right;
 	width:80px;
 	height:16px;
-	background:url(../images/xingxing_bg.gif) no-repeat left bottom;
+	background:url(../image/xingxing_bg.gif) no-repeat left bottom;
 	position:relative;
 	padding:0;
 	margin:0;
@@ -1479,7 +1479,7 @@ span#btc{
 	text-indent:-9999px;
 	top:0;
 	left:0;
-	background:url(../images/xingxing_bg.gif) no-repeat left top;
+	background:url(../image/xingxing_bg.gif) no-repeat left top;
 	width:100%;
 	height:15px;
 	font-size:9px;/*此css是因为IE6下继承了父属性中的24像素！overflow:hidden都不起作用。真TMD IE6*/
@@ -1519,7 +1519,7 @@ span#btc{
 #jiazhi li.jiazhi_age table th{
 	border:1px solid #CCC;
 	padding:7px 3px;
-	background:url(../images/navi_bg.gif) repeat-x scroll left center transparent;
+	background:url(../image/navi_bg.gif) repeat-x scroll left center transparent;
 }
 ul.Options1{
 	position:absolute;
@@ -1534,7 +1534,7 @@ ul.Options1 li{
 }
 ul.Options1 li.red{
 	color:#F00;
-	background:url(../images/time.png) no-repeat left center;
+	background:url(../image/time.png) no-repeat left center;
 	font-weight:bold;
 	text-indent:20px;
 }
@@ -1557,10 +1557,10 @@ ul.outport li a{
 	padding-right:20px;
 	}
 ul.outport li.excelCsv a{
-background:url(../images/execl_csv.png) no-repeat right center;
+background:url(../image/execl_csv.png) no-repeat right center;
 	}
 ul.outport li.excelCopy a{
-	background:url(../images/excel_copy.png) no-repeat right center;
+	background:url(../image/excel_copy.png) no-repeat right center;
 	}
 ul.outport li a{
 	text-decoration:none;
@@ -1587,11 +1587,11 @@ ul.outport li a:hover{
 	width:130px;
 	height:28px;
 	line-height:28px;
-	background:url(../images/tab_bg.gif) no-repeat right top;
+	background:url(../image/tab_bg.gif) no-repeat right top;
 }
 .tabDetails ul.rightTab li a:hover, .tabDetails ul li.tabSelected a{
 	color:#FFF;
-	background:url(../images/tab_bg.gif) no-repeat left top;
+	background:url(../image/tab_bg.gif) no-repeat left top;
 }
 ul.table_head{
 	width:100%;
@@ -1600,7 +1600,7 @@ ul.table_head{
 }
 ul.table_head li{
 	float:left;
-	background:url(../images/tab_now.jpg) no-repeat left center;
+	background:url(../image/tab_now.jpg) no-repeat left center;
 	text-align:center;
 	width:80px;
 	height:23px;
@@ -1612,13 +1612,13 @@ ul.table_head li.long{
 	width:150px;
 	}
 ul.table_head li.long a{
-	background:url(../images/tab3.jpg) no-repeat left center;
+	background:url(../image/tab3.jpg) no-repeat left center;
 	display:block;
 	font-weight:normal;
 	width:150px;
 }
 ul.table_head li.ui-tabs-selected a{
-	background:url(../images/tab_now3.jpg) no-repeat left center;
+	background:url(../image/tab_now3.jpg) no-repeat left center;
 	color:#0C5E78;
 	text-decoration:none;
 	font-weight:bold;
@@ -1628,7 +1628,7 @@ ul.table_head li.table_time{
 	right:4px;
 	color:#FF0000;
 	background:none;
-	background:url(../images/time.png) no-repeat left top;
+	background:url(../image/time.png) no-repeat left top;
 	text-indent:20px;
 }
 
@@ -1703,7 +1703,7 @@ ul.table_head li.table_time{
 	margin-top:18px;
 	width:1000px;
 	padding:18px 0;
-	background:url(../images/bottom_bg.jpg) no-repeat center top;
+	background:url(../image/bottom_bg.jpg) no-repeat center top;
 	text-align:center;
 }
 
@@ -1773,7 +1773,7 @@ ul.table_head li.table_time{
 	height:27px;
 }
 #divtop ul li.left{
-	background-image: url(../images/topk_left.gif);
+	background-image: url(../image/topk_left.gif);
 	background-repeat: no-repeat;
 	width:7px;
 	height:27px;
@@ -1781,7 +1781,7 @@ ul.table_head li.table_time{
 	display: block;
 }
 #divtop ul li.right{
-	background-image:url(../images/topk_right.gif);
+	background-image:url(../image/topk_right.gif);
 	background-repeat: no-repeat;
 	width:7px;
 	height:27px;
@@ -1789,7 +1789,7 @@ ul.table_head li.table_time{
 	display: block;
 }
 #divtop ul li.mid{
-	background-image: url(../images/topk_mid.gif);
+	background-image: url(../image/topk_mid.gif);
 	background-repeat: repeat-x;
 	height:27px;
 	float:left;
@@ -1816,7 +1816,7 @@ ul.table_head li.table_time{
 	text-align:left;
 }
 .bkcolor{
-	background-image: url(../images/colorbk.gif);
+	background-image: url(../image/colorbk.gif);
 	background-repeat: repeat-x;
 	line-height:21px;
 	background-position: left center;
@@ -1828,13 +1828,13 @@ ul.table_head li.table_time{
 .mesWindow{background-color:#E3E3E3; padding:8px; position:absolute; width:675px; left:20%;top:25%;z-index:102;}
 .mesWindowTop{padding:3px 0; font-weight:bold;text-align:left;font-size:12px; position:relative;}
 .mesWindowContent{font-size:12px;}
-.mesWindowTop table td input.close{width:14px; height:14px; padding:0; margin:0; border:none; cursor:pointer; background: url(../images/close.gif) no-repeat left center; text-indent:-9999px; z-index:108; display:block;}
+.mesWindowTop table td input.close{width:14px; height:14px; padding:0; margin:0; border:none; cursor:pointer; background: url(../image/close.gif) no-repeat left center; text-indent:-9999px; z-index:108; display:block;}
 /*报错页面*/
 #Error{
 	width:510px;
 	height:124px;
 	padding:70px 59px 30px 60px;
-	background:url(../images/error_bg.gif) no-repeat left top;
+	background:url(../image/error_bg.gif) no-repeat left top;
 	margin:24px auto;
 }
 #Error .error_img{
@@ -1865,7 +1865,7 @@ ul.table_head li.table_time{
 	margin:0 auto;
 	padding:8px 12px 8px 32px;
 	margin-bottom:8px;
-	background:#E9F4F6 url(../images/email.png) no-repeat 12px 14px;
+	background:#E9F4F6 url(../image/email.png) no-repeat 12px 14px;
 	border:1px solid #C9DBDF;
 	}
 #Notice p{
@@ -1897,17 +1897,17 @@ ul.table_head li.table_time{
 #ask h3{
 	width:985px;
 	text-indent:-9999px;
-	background:url(../images/q_h3_bg.gif) no-repeat left top;
+	background:url(../image/q_h3_bg.gif) no-repeat left top;
 	height:36px;
 }
 #ask h3.jiaocheng{
-	background:url(../images/j_h3_bg.gif) no-repeat left top;
+	background:url(../image/j_h3_bg.gif) no-repeat left top;
 }
 #ask h3.contactUs{
-	background:url(../images/c_h3_bg.gif) no-repeat left top;
+	background:url(../image/c_h3_bg.gif) no-repeat left top;
 	}
 #ask h3.help{
-	background:url(../images/q_h3_bg.gif) no-repeat left top;
+	background:url(../image/q_h3_bg.gif) no-repeat left top;
 	}
 #ask h4{
 	font-size:12px;
@@ -1987,11 +1987,11 @@ ul.table_head li.table_time{
 	}
 #ui-datepicker-div .ui-datepicker-header a.ui-datepicker-prev{
 	left:5px;
-	background:url(../images/ui-icons_228ef1_256x240.png) no-repeat -80px -192px;
+	background:url(../image/ui-icons_228ef1_256x240.png) no-repeat -80px -192px;
 	}
 #ui-datepicker-div .ui-datepicker-header a.ui-datepicker-next{
 	right:5px;
-	background:url(../images/ui-icons_228ef1_256x240.png) no-repeat -48px -192px;
+	background:url(../image/ui-icons_228ef1_256x240.png) no-repeat -48px -192px;
 	}
 #ui-datepicker-div .ui-datepicker-header a.ui-state-disabled{
 	opacity:0.35;
@@ -1999,7 +1999,7 @@ ul.table_head li.table_time{
 #ui-datepicker-div .ui-datepicker-title{
 	font-size:14px;
 	text-align:center;
-	background:url(../images/h5_bg.gif) repeat-x left center;
+	background:url(../image/h5_bg.gif) repeat-x left center;
 	line-height:25px;
 	height:25px;
 	}
@@ -2042,14 +2042,14 @@ ul.table_head li.table_time{
 	width:910px;
 	margin:10px auto;
 	padding:20px;
-	background:url(../images/waiting_bg.gif) repeat-x left top;
+	background:url(../image/waiting_bg.gif) repeat-x left top;
 	color:#a0a0a0;
 }
 #Part1{
 	width:810px;
 	padding-left:100px;
 	padding-top:20px;
-	background:url(../images/0504312.gif) no-repeat left top;
+	background:url(../image/0504312.gif) no-repeat left top;
 	}
 #Part1 div{
 	margin:10px 0;
@@ -2071,20 +2071,20 @@ ul.table_head li.table_time{
 	height:16px;
 	}
 #Part1 #DoYouKonw h3{
-	background:url(../images/doyouknow.gif) no-repeat left top;
+	background:url(../image/doyouknow.gif) no-repeat left top;
 	}
 #Part1 #UpdateNote{
-	background:url(../images/update.gif) no-repeat left top;
+	background:url(../image/update.gif) no-repeat left top;
 	}
 #UpdateNote ul{
 	height:120px;
 	}
 #UpdateNote ul li{
-	background:url(../images/li_bg.gif) no-repeat left center;
+	background:url(../image/li_bg.gif) no-repeat left center;
 	text-indent:15px;
 	}
 #Part2{
-	background:url(../images/part2_bg.gif) no-repeat center top;
+	background:url(../image/part2_bg.gif) no-repeat center top;
 	width:890px;
 	height:107px;
 	padding:10px;
@@ -2172,7 +2172,7 @@ filter:alpha(opacity=45);            /* 用于IE浏览器－透明度为20%*/
 	font-size:12px;
 	line-height:28px;
 	padding-left:20px;
-	background:#fffab9 url(../images/current-work.png) no-repeat left center;
+	background:#fffab9 url(../image/current-work.png) no-repeat left center;
 	margin-bottom:10px;
 	}
 #MainContentRight .weidinggou span{
@@ -2241,7 +2241,7 @@ filter:alpha(opacity=45);            /* 用于IE浏览器－透明度为20%*/
 	color:#0080FF;
 }
 #tagContent0 div.sdLeft table td.selectpro a{
-	background:url(images/finished-work.gif) no-repeat left center;
+	background:url(image/finished-work.gif) no-repeat left center;
 	padding-left:16px;
 	display:block;
 }
