@@ -43,7 +43,7 @@ $(function(){
 	});
 })
 </script>
-<div id="uplandDiv" style="width:100%; height:715px;border:0px solid #D3D3D3;background-color: #FFFFFF;">
+<div id="configDiv" style="width:100%; height:715px;border:0px solid #D3D3D3;background-color: #FFFFFF;">
 <div style="margin-top:20px;margin-left:10px">
 <span style="font-family:Verdana; font-size:13px;">任务名称:任务1</span>
 <a href="#" id ="back" style="float:right;margin-right:50px">回退</a>
@@ -55,7 +55,7 @@ $(function(){
 	</form>  
 </div>
 <div style="margin-top:20px;margin-left:10px">
-<span style="font-family:Verdana; font-size:13px;">附件列表：</span>
+<span style="font-family:Verdana; font-size:13px;">变量列表：</span>
 </div>
 <div style="margin-top:5px">
 	<table>  
