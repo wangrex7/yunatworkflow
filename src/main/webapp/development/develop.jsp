@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <link rel="stylesheet" href="css/layout.css" type="text/css" />
-<script type="text/javascript" src="jquery/jquery-1.4.4.min.js"></script>
 <script type="text/javascript" src="js/development/develop.js"></script>
 <script src="jquery/jquery.ui.draggable.js" type="text/javascript"></script>
 		

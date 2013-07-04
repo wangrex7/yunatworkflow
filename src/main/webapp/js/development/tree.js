@@ -67,6 +67,7 @@ $(function(){
 			  url: "uploadview.do",
 			  type: "POST",
 			  dataType:"html",
+			  data:({"id":$("#taskidhidden").val()}),
 			  async:false,
 			  success: function(data){
 				  $("#developCenterDiv").html(data);
@@ -87,6 +88,7 @@ $(function(){
 			  url: "configview.do",
 			  type: "POST",
 			  dataType:"html",
+			  data:({"id":$("#taskidhidden").val()}),
 			  async:false,
 			  success: function(data){
 				  $("#developCenterDiv").html(data);

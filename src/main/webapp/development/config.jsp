@@ -45,9 +45,10 @@ $(function(){
 </script>
 <div id="configDiv" style="width:100%; height:715px;border:0px solid #D3D3D3;background-color: #FFFFFF;">
 <div style="margin-top:20px;margin-left:10px">
-<span style="font-family:Verdana; font-size:13px;">任务名称:任务1</span>
+<span style="font-family:Verdana; font-size:13px;">任务名称:${ztree.name}</span>
 <a href="#" id ="back" style="float:right;margin-right:50px">回退</a>
 </div>
+<input type="hidden" id="task_id" value="${ztree.taskId}">
 <div style="margin-top:20px;margin-left:10px">
 	<form method="post" action="/form" enctype="multipart/form-data">  
 	    <input type="file" name="file"/>  
