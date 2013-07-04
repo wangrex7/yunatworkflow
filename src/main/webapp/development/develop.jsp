@@ -19,7 +19,6 @@
 </head>
 
 <body>
-<body>
 <div id="container">
   <div class="menu">
 	<div id="developCenter" name="developCenter" class="menu-item menu-item-active">开发中心</div>
@@ -32,19 +31,26 @@
 	<div class='buttons' style="margin-top: 10px;">
 	<input id="run" type="button" value="运行" style="background:transparent;border-width:1px">
 	<input id="save" type="button" value="保存" style="background:transparent;border-width:1px">
+	<input type="hidden" id = "idhidden" value="">
+	<input type="hidden" id = "contenthidden" value="">
+	<input type="hidden" id = "typehidden" value="">
 	<input id="upload" type="button" value="上传附件"  style="background:transparent;border-width:1px;float:right;">
 	<input id="config" type="button" value="变量规则" style="background:transparent;border-width:1px;float:right;">
 	</div>
     </div>
     <div class="margin"></div>
     <div id="divText">
-	<span id="scriptsid" value="XXXSQL">XXXSQL</span>
-    	<textarea id="scripts" cols="87" rows="17" id="content" style="border: 1 solid #888888;LINE-HEIGHT:18px;padding: 3px;"></textarea>
+		<!-- <span id="scriptsid"></span> -->
+    	<textarea id="scripts" cols="87" rows="17" id="content" style="border: 1 solid #D3D3D3;LINE-HEIGHT:18px;padding: 3px;"></textarea>
     </div>
     <div class="margin"></div>
     <div id="divLog">
-	<span id="logsid" value="日志">日志</span>
-	<textarea id="logs" cols="87" rows="16" id="content" style="border: 1 solid #888888;LINE-HEIGHT:18px;padding: 3px;"></textarea>
+    <div>
+	<span id="logsid" value="日志">日志</span><input id="clear" type="button" value="清空" style="background:transparent;border-width:1px;float:right;">
+	</div>
+	<div>
+	<textarea id="logs" cols="87" rows="16" id="content" style="border: 1 solid #D3D3D3;LINE-HEIGHT:18px;padding: 3px;overflow-x:auto"></textarea>
+	</div>
     </div>
   </div>
   <div id="workflowCenterDiv" style="display:none">
