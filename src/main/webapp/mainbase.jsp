@@ -7,7 +7,7 @@
 <title>hadoop任务调度</title>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
 <link href="css/jquery.ui/development-bundle/jquery.ui.all.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="jquery/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="jquery/jquery-1.10.2.js"></script>
 <script src="jquery.ui/development-bundle/jquery.ui.core.js" type="text/javascript"></script>
 <script src="jquery.ui/development-bundle/jquery.ui.widget.js" type="text/javascript"></script>
 <script src="jquery.ui/development-bundle/jquery.ui.tabs.js" type="text/javascript"></script>
