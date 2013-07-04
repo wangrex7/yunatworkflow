@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <link rel="stylesheet" href="css/layout.css" type="text/css" />
 <link rel="stylesheet" href="css/zTreeStyle/zTreeStyle.css" type="text/css" />
-<script type="text/javascript" src="jquery/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="jquery/jquery-1.10.2.js"></script>
 <script type="text/javascript" src="jquery/jquery.ztree.core-3.5.js"></script>
 <script type="text/javascript" src="jquery/jquery.ztree.excheck-3.5.js"></script>
 <script type="text/javascript" src="jquery/jquery.ztree.exedit-3.5.js"></script>
