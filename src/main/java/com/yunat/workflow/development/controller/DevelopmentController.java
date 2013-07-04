@@ -137,7 +137,7 @@ public class DevelopmentController {
 	}
 
 	/**
-	 * <p>[描述方法实现的功能]</p>
+	 * <p>开发中心总界面</p>
 	 * 
 	 * @param request
 	 * @param response
@@ -147,23 +147,50 @@ public class DevelopmentController {
 	 * @date: Created on Jul 4, 2013 10:10:00 AM
 	 */
 	@RequestMapping(value = "deveopmentview.do")
-	public ModelAndView getview(HttpServletRequest request,
-			HttpServletResponse response) {
+	public ModelAndView getview() {
 		ModelAndView mv = new ModelAndView("/development/develop");
 		return mv;
 	}
 
 	/**
-	 * <p>[描述方法实现的功能]</p>
+	 * <p>开发中心树界面</p>
+	 * 
+	 * @return
+	 * @return: ModelAndView
+	 * @author: 邱路平 - luping.qiu@huaat.com
+	 * @date: Created on Jul 4, 2013 2:23:27 PM
+	 */
+	@RequestMapping(value = "treeview.do")
+	public ModelAndView treeView() {
+		ModelAndView mv = new ModelAndView("/development/tree");
+		return mv;
+	}
+	
+	/**
+	 * <p>开发中心上传界面</p>
 	 * 
 	 * @return
 	 * @return: ModelAndView
 	 * @author: 邱路平 - luping.qiu@huaat.com
 	 * @date: Created on Jul 4, 2013 10:10:08 AM
 	 */
-	@RequestMapping(value = "upload.do")
-	public ModelAndView login() {
+	@RequestMapping(value = "uploadview.do")
+	public ModelAndView uploadView() {
 		ModelAndView mv = new ModelAndView("/development/upload");
+		return mv;
+	}
+	
+	/**
+	 * <p>开发中心配置变量界面</p>
+	 * 
+	 * @return
+	 * @return: ModelAndView
+	 * @author: 邱路平 - luping.qiu@huaat.com
+	 * @date: Created on Jul 4, 2013 2:25:23 PM
+	 */
+	@RequestMapping(value = "configview.do")
+	public ModelAndView configView() {
+		ModelAndView mv = new ModelAndView("/development/config");
 		return mv;
 	}
 }
