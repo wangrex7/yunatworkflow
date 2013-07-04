@@ -24,19 +24,23 @@ import com.yunat.workflow.development.domain.Ztree;
 import com.yunat.workflow.development.service.DevelopmentService;
 
 /**
- * <p>开发中心控制器</p>
- *
+ * <p>
+ * 开发中心控制器
+ * </p>
+ * 
  * @author 邱路平 - luping.qiu@huaat.com
  * @version 1.0 Created on Jun 27, 2013 4:15:46 PM
  */
 @Controller
 public class DevelopmentController {
-	
+
 	@Autowired
 	private DevelopmentService developmentService;
-	
+
 	/**
-	 * <p>查询任务树</p>
+	 * <p>
+	 * 查询任务树
+	 * </p>
 	 * 
 	 * @return
 	 * @return: List<Ztree>
@@ -45,12 +49,14 @@ public class DevelopmentController {
 	 */
 	@ResponseBody
 	@RequestMapping(value = "queryZtree.do")
-	public List<Ztree> queryZtree(){
+	public List<Ztree> queryZtree() {
 		return developmentService.queryZtreeNode();
 	}
 
 	/**
-	 * <p>增加树节点</p>
+	 * <p>
+	 * 增加树节点
+	 * </p>
 	 * 
 	 * @param zNodeJson
 	 * @return
@@ -60,13 +66,15 @@ public class DevelopmentController {
 	 */
 	@ResponseBody
 	@RequestMapping(value = "addZtreeNode.do")
-	public Ztree addZtreeNode(Ztree zNodeJson){
-		Ztree zt =developmentService.addZtreeNode(zNodeJson);
+	public Ztree addZtreeNode(Ztree zNodeJson) {
+		Ztree zt = developmentService.addZtreeNode(zNodeJson);
 		return zt;
 	}
-	
+
 	/**
-	 * <p>删除节点</p>
+	 * <p>
+	 * 删除节点
+	 * </p>
 	 * 
 	 * @param zNodeJson
 	 * @return: void
@@ -75,12 +83,14 @@ public class DevelopmentController {
 	 */
 	@ResponseBody
 	@RequestMapping(value = "deleteZtreeNode.do")
-	public void deleteZtreeNode(Ztree zNodeJson){
+	public void deleteZtreeNode(Ztree zNodeJson) {
 		developmentService.deleteZtreeNode(zNodeJson);
 	}
-	
+
 	/**
-	 * <p>修改节点名称</p>
+	 * <p>
+	 * 修改节点名称
+	 * </p>
 	 * 
 	 * @param zNodeJson
 	 * @return: void
@@ -89,12 +99,14 @@ public class DevelopmentController {
 	 */
 	@ResponseBody
 	@RequestMapping(value = "renameZtreeNode.do")
-	public void renameZtreeNode(Ztree zNodeJson){
+	public void renameZtreeNode(Ztree zNodeJson) {
 		developmentService.renameZtreeNode(zNodeJson);
 	}
-	
+
 	/**
-	 * <p>查询节点内容信息</p>
+	 * <p>
+	 * 查询节点内容信息
+	 * </p>
 	 * 
 	 * @param zNodeJson
 	 * @return
@@ -104,12 +116,14 @@ public class DevelopmentController {
 	 */
 	@ResponseBody
 	@RequestMapping(value = "queryZtreeNodeContent.do")
-	public Ztree queryZtreeNodeContent(Ztree zNodeJson){
+	public Ztree queryZtreeNodeContent(Ztree zNodeJson) {
 		return developmentService.queryZtreeNodeNodeContent(zNodeJson);
 	}
-	
+
 	/**
-	 * <p>保存节点内容信息</p>
+	 * <p>
+	 * 保存节点内容信息
+	 * </p>
 	 * 
 	 * @param zNodeJson
 	 * @return: void
@@ -118,16 +132,22 @@ public class DevelopmentController {
 	 */
 	@ResponseBody
 	@RequestMapping(value = "saveZtreeNodeContent.do")
-	public void saveZtreeNodeContent(Ztree zNodeJson){
+	public void saveZtreeNodeContent(Ztree zNodeJson) {
 		developmentService.saveZtreeNodeContent(zNodeJson);
 	}
-	
+
 	@RequestMapping(value = "deveopmentview.do")
 	public ModelAndView getview(HttpServletRequest request,
-			HttpServletResponse response){
+			HttpServletResponse response) {
 		ModelAndView mv = new ModelAndView("/development/develop", "command",
 				"LOGIN SUCCESS ");
 		return mv;
-		
+	}
+
+	@RequestMapping(value = "upload.do")
+	public ModelAndView login() {
+		ModelAndView mv = new ModelAndView("/development/upload", "command",
+				"LOGIN SUCCESS");
+		return mv;
 	}
 }
