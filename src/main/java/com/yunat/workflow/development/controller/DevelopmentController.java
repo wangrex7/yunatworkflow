@@ -137,7 +137,9 @@ public class DevelopmentController {
 	}
 
 	/**
-	 * <p>[描述方法实现的功能]</p>
+	 * <p>
+	 * [描述方法实现的功能]
+	 * </p>
 	 * 
 	 * @param request
 	 * @param response
@@ -154,7 +156,25 @@ public class DevelopmentController {
 	}
 
 	/**
-	 * <p>[描述方法实现的功能]</p>
+	 * <p>
+	 * 开发中心树界面
+	 * </p>
+	 * 
+	 * @return
+	 * @return: ModelAndView
+	 * @author: 邱路平 - luping.qiu@huaat.com
+	 * @date: Created on Jul 4, 2013 2:23:27 PM
+	 */
+	@RequestMapping(value = "treeview.do")
+	public ModelAndView treeView() {
+		ModelAndView mv = new ModelAndView("/development/tree");
+		return mv;
+	}
+
+	/**
+	 * <p>
+	 * [描述方法实现的功能]
+	 * </p>
 	 * 
 	 * @return
 	 * @return: ModelAndView
