@@ -42,28 +42,8 @@ $(function(){
 		});
 	});
 })
-$(document).ready(function(){
-	$.ajax({
-	  url: "queryattachment.do",
-	  type: "POST",
-	  dataType:"json",
-	  data:({"task_id":$("#task_id").val()}),
-	  async:false,
-	  success: function(data){
-		  html ="<table><tr><th>文件名称</th><th>文件描述</th><th>操作</th></tr>";
-		  for (var i=0;i<data.length;i++){
-			  html += "<tr><td>"+data[i].file_name+"</td><td>"+data[i].description+"</td><td><a href='#'>删除</a></td></tr>";
-		  }
-		  html+="</table>";
-		  $("#attachmentlist").html(html);
-	  },
-	  error : function(data) {  
-        alert("error");
-      }  
-	});
-});
 </script>
-<div id="uplandDiv" style="width:100%; height:715px;border:0px solid #D3D3D3;background-color: #FFFFFF;">
+<div id="configDiv" style="width:100%; height:715px;border:0px solid #D3D3D3;background-color: #FFFFFF;">
 <div style="margin-top:20px;margin-left:10px">
 <span style="font-family:Verdana; font-size:13px;">任务名称:${ztree.name}</span>
 <a href="#" id ="back" style="float:right;margin-right:50px">回退</a>
@@ -76,9 +56,9 @@ $(document).ready(function(){
 	</form>  
 </div>
 <div style="margin-top:20px;margin-left:10px">
-<span style="font-family:Verdana; font-size:13px;">附件列表：</span>
+<span style="font-family:Verdana; font-size:13px;">变量列表：</span>
 </div>
-<div style="margin-top:5px" id ="attachmentlist">
+<div style="margin-top:5px">
 	<table>  
 	<tr>  
 	  <th>a</th>  
