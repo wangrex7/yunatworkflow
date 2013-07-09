@@ -34,5 +34,10 @@ public class DevelopmentServiceImplTest extends AbstractJUnit4SpringContextTests
 	public void queryZtreeNodetest() {
 		developmentService.queryZtreeNode();
 	}
+	
+	@Test
+	public void queryAttachmenttest() {
+		developmentService.queryAttachmentByTaskId("2");
+	}
 
 }

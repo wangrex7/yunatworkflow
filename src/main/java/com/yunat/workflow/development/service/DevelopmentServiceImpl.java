@@ -16,10 +16,13 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.yunat.workflow.development.dao.ZtreeNodeDAO;
 import org.springframework.util.StringUtils;
 
+import com.yunat.workflow.development.dao.AttachmentDAO;
+import com.yunat.workflow.development.dao.ZtreeNodeDAO;
+import com.yunat.workflow.development.domain.AttachmentDomain;
 import com.yunat.workflow.development.domain.Ztree;
+import com.yunat.workflow.development.pojo.Attachment;
 import com.yunat.workflow.development.pojo.ZtreeNode;
 
 /**
@@ -35,6 +38,9 @@ public class DevelopmentServiceImpl implements DevelopmentService {
 	
 	@Autowired
 	private ZtreeNodeDAO ztreeNodeDAO;
+	
+	@Autowired
+	private AttachmentDAO attachmentDAO;
 
 	/**
 	 * <p>
@@ -147,6 +153,8 @@ public class DevelopmentServiceImpl implements DevelopmentService {
 		zn = ztreeNodeDAO.queryZtreeNodeContent(zn);
 		
 		ztree.setContent(zn.getContent());
+		ztree.setName(zn.getName());
+		ztree.setTaskId(zn.getTask_id());
 		return ztree;
 	}
 
@@ -164,5 +172,27 @@ public class DevelopmentServiceImpl implements DevelopmentService {
 		zn.setContent(ztree.getContent());
 		ztreeNodeDAO.updateZtreeNodeContent(zn);
 		
+	}
+
+	/**
+	 * <p>根据任务id查询附件信息</p>
+	 * 
+	 * @see com.yunat.workflow.development.service.DevelopmentService#queryAttachmentByTaskId(java.lang.String)
+	 * @author: 邱路平 - luping.qiu@huaat.com 
+	 * @date: Created on Jul 4, 2013 4:29:57 PM
+	 */
+	@Transactional
+	public List<AttachmentDomain> queryAttachmentByTaskId(String task_id) {
+		List<Attachment> attachmentPojo = attachmentDAO.queryAttachmentByTaskId(task_id);
+		List<AttachmentDomain> attachmentDomain = new ArrayList<AttachmentDomain>();
+		for(Attachment ap :attachmentPojo){
+			AttachmentDomain ad = new AttachmentDomain();
+			ad.setFid(ap.getFid());
+			ad.setTask_id(ap.getTask_id());
+			ad.setFile_name(ap.getFile_name());
+			ad.setDescription(ap.getDescription());
+			attachmentDomain.add(ad);
+		}
+		return attachmentDomain;
 	}
 }
