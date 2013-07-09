@@ -11,15 +11,13 @@ package com.yunat.workflow.development.controller;
 
 import java.util.List;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.yunat.workflow.development.domain.AttachmentDomain;
 import com.yunat.workflow.development.domain.Ztree;
 import com.yunat.workflow.development.service.DevelopmentService;
 
@@ -138,7 +136,7 @@ public class DevelopmentController {
 
 	/**
 	 * <p>
-	 * [描述方法实现的功能]
+	 * 开发中心总界面
 	 * </p>
 	 * 
 	 * @param request
@@ -149,8 +147,7 @@ public class DevelopmentController {
 	 * @date: Created on Jul 4, 2013 10:10:00 AM
 	 */
 	@RequestMapping(value = "deveopmentview.do")
-	public ModelAndView getview(HttpServletRequest request,
-			HttpServletResponse response) {
+	public ModelAndView getview() {
 		ModelAndView mv = new ModelAndView("/development/develop");
 		return mv;
 	}
@@ -173,7 +170,7 @@ public class DevelopmentController {
 
 	/**
 	 * <p>
-	 * [描述方法实现的功能]
+	 * 开发中心上传界面
 	 * </p>
 	 * 
 	 * @return
@@ -181,9 +178,46 @@ public class DevelopmentController {
 	 * @author: 邱路平 - luping.qiu@huaat.com
 	 * @date: Created on Jul 4, 2013 10:10:08 AM
 	 */
-	@RequestMapping(value = "upload.do")
-	public ModelAndView login() {
-		ModelAndView mv = new ModelAndView("/development/upload");
+	@RequestMapping(value = "uploadview.do")
+	public ModelAndView uploadView(Ztree zNodeJson) {
+		zNodeJson = developmentService.queryZtreeNodeNodeContent(zNodeJson);
+		ModelAndView mv = new ModelAndView("/development/upload", "ztree",
+				zNodeJson);
 		return mv;
+	}
+
+	/**
+	 * <p>
+	 * 开发中心配置变量界面
+	 * </p>
+	 * 
+	 * @return
+	 * @return: ModelAndView
+	 * @author: 邱路平 - luping.qiu@huaat.com
+	 * @date: Created on Jul 4, 2013 2:25:23 PM
+	 */
+	@RequestMapping(value = "configview.do")
+	public ModelAndView configView(Ztree zNodeJson) {
+		zNodeJson = developmentService.queryZtreeNodeNodeContent(zNodeJson);
+		ModelAndView mv = new ModelAndView("/development/config", "ztree",
+				zNodeJson);
+		return mv;
+	}
+
+	/**
+	 * <p>
+	 * 查询附件信息列表
+	 * </p>
+	 * 
+	 * @param ad
+	 * @return
+	 * @return: List<AttachmentDomain>
+	 * @author: 邱路平 - luping.qiu@huaat.com
+	 * @date: Created on Jul 4, 2013 5:19:51 PM
+	 */
+	@ResponseBody
+	@RequestMapping(value = "queryattachment.do")
+	public List<AttachmentDomain> queryAttachmentList(AttachmentDomain ad) {
+		return developmentService.queryAttachmentByTaskId(ad.getTask_id());
 	}
 }

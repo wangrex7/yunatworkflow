@@ -11,6 +11,7 @@ package com.yunat.workflow.development.service;
 
 import java.util.List;
 
+import com.yunat.workflow.development.domain.AttachmentDomain;
 import com.yunat.workflow.development.domain.Ztree;
 
 /**
@@ -82,4 +83,15 @@ public interface DevelopmentService {
 	 * @date: Created on Jul 1, 2013 2:42:44 PM
 	 */
 	public void saveZtreeNodeContent(Ztree ztree);
+	
+	/**
+	 * <p>根据任务id查询附件信息</p>
+	 * 
+	 * @param task_id
+	 * @return
+	 * @return: List<Attachment>
+	 * @author: 邱路平 - luping.qiu@huaat.com
+	 * @date: Created on Jul 4, 2013 4:29:21 PM
+	 */
+	public List<AttachmentDomain> queryAttachmentByTaskId(String task_id);
 }
