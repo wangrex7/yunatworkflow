@@ -23,10 +23,8 @@ public class workflowController {
 	}
 	
 	@RequestMapping(value = "workflowview.do")
-	public ModelAndView getview(HttpServletRequest request,
-			HttpServletResponse response) {
-		ModelAndView mv = new ModelAndView("/definiton/wdefinition", "command",
-				"LOGIN SUCCESS ");
+	public ModelAndView getview() {
+		ModelAndView mv = new ModelAndView("/definiton/wdefinition");
 		return mv;
 	}
 
